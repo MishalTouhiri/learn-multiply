@@ -1,193 +1,364 @@
-/* Global Styles */
+/* 🌈 إعدادات عامة */
 body {
-  font-family: 'Tahoma', 'Helvetica Neue', Arial, sans-serif;
-  background-color: #f0f2f5;
+  font-family: 'Comic Sans MS', 'Tahoma', 'Arial', sans-serif;
+  background: linear-gradient(135deg, #fceabb, #f8b500); /* خلفية دافئة ومبهجة */
   color: #333;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   margin: 0;
-  direction: rtl; /* اتجاه من اليمين لليسار */
+  direction: rtl;
 }
 
+/* 🧸 حاوية التطبيق */
 .app-container {
   width: 100%;
   max-width: 600px;
   margin: 20px;
-  padding: 25px;
-  background-color: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 24px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
   text-align: center;
+  border: 4px solid #ffcc80;
+  transition: transform 0.2s ease, all 0.3s ease-out;
+}
+.app-container:hover {
+  transform: scale(1.01);
 }
 
+/* 🐥 العنوان */
 header h1 {
-  color: #1a237e; /* لون داكن */
-  font-size: 2.2rem;
-  margin: 5px 0;
+  color: #ff7043;
+  font-size: 2.5rem;
+  margin: 10px 0;
+  text-shadow: 1px 1px 3px rgba(255, 152, 0, 0.4);
+  transition: all 0.3s ease-out;
 }
 header p {
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: #666;
-  margin-top: 0;
   margin-bottom: 25px;
+  transition: all 0.3s ease-out;
 }
 
-/* Number Grid Component */
+/* 🔢 مربعات الأرقام */
 .grid-container {
-  background-color: #e3f2fd; /* خلفية سماوية فاتحة مثل الصورة */
-  border: 1px solid #bbdefb;
-  border-radius: 8px;
-  padding: 15px;
-  margin-bottom: 20px;
+  background-color: #fff3e0;
+  border: 2px solid #ffe0b2;
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 25px;
+  transition: all 0.3s ease-out;
 }
 
 .grid-container h3 {
   margin-top: 0;
   margin-bottom: 15px;
-  color: #0d47a1; /* أزرق داكن */
+  color: #fb8c00;
+  font-size: 1.4rem;
 }
 
+/* شبكة الأرقام */
 .grid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr); /* 6 أعمدة */
-  gap: 10px;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 12px;
+  transition: all 0.3s ease-out;
 }
 
 .grid-item {
-  padding: 15px 10px;
-  font-size: 1.5rem; /* تكبير الخط للأرقام العربية */
+  padding: 18px 10px;
+  font-size: 1.8rem;
   font-weight: bold;
   border: 2px solid transparent;
-  border-radius: 6px;
-  background-color: #ffffff;
+  border-radius: 12px;
+  background-color: #fff;
   cursor: pointer;
   transition: all 0.2s ease;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  color: #333;
 }
 
 .grid-item:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+  background-color: #fffde7;
 }
 
-/* التحديد بالأخضر والأزرق كما في الصورة */
+/* 🟢 تحديد بالأخضر */
 .grid-container:first-of-type .grid-item.selected {
-  border-color: #28a745; /* إطار أخضر */
-  background-color: #d4edda;
-  color: #155724;
-  box-shadow: 0 0 10px rgba(40, 167, 69, 0.5);
+  border-color: #4caf50;
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  box-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
 }
 
+/* 🔵 تحديد بالأزرق */
 .grid-container:last-of-type .grid-item.selected {
-  border-color: #007bff; /* إطار أزرق */
-  background-color: #cce5ff;
-  color: #004085;
-  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+  border-color: #42a5f5;
+  background-color: #e3f2fd;
+  color: #0d47a1;
+  box-shadow: 0 0 10px rgba(33, 150, 243, 0.5);
 }
 
-
-/* Display Screen */
+/* 🖥️ شاشة العرض */
 .display-screen {
-  background-color: #212529; /* خلفية سوداء/داكنة مثل الصورة */
-  color: #ffffff;
-  font-size: 4.5rem; /* تكبير الخط للأرقام العربية */
+  background: radial-gradient(circle, #1976d2, #0d47a1);
+  color: #fff;
+  font-size: 4rem;
   font-weight: bold;
-  padding: 45px 20px;
-  border-radius: 8px;
+  padding: 40px 20px;
+  border-radius: 16px;
   margin-bottom: 25px;
-  font-family: 'Arial', 'Tahoma', sans-serif; /* خط أوضح للأرقام */
+  font-family: 'Tahoma', sans-serif;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-out;
 }
 
-/* Answer Form */
+/* ✏️ نموذج الإجابة */
 .answer-form {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 15px;
   margin-bottom: 20px;
+  transition: all 0.3s ease-out;
 }
 
 .input-group {
   display: flex;
   flex-direction: column;
-  text-align: right; /* محاذاة النص لليمين */
+  text-align: right;
 }
 
 .input-group label {
   margin-bottom: 8px;
-  font-weight: 600;
-  color: #555;
-  font-size: 0.9rem;
+  font-weight: bold;
+  color: #444;
+  font-size: 1rem;
 }
 
 .input-group input {
-  padding: 12px;
-  font-size: 1.4rem; /* تكبير الخط */
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  background-color: #f8f9fa;
-  text-align: center; /* توسيط الرقم */
-  font-family: 'Arial', 'Tahoma', sans-serif; /* خط أوضح للأرقام */
+  padding: 14px;
+  font-size: 1.6rem;
+  border: 2px solid #ffcc80;
+  border-radius: 10px;
+  background-color: #fffde7;
+  text-align: center;
+  transition: border-color 0.2s;
+}
+
+.input-group input:focus {
+  border-color: #ffb300;
+  outline: none;
 }
 
 .input-group input:disabled {
-  background-color: #e9ecef;
-  color: #6c757d;
+  background-color: #f1f1f1;
+  color: #888;
   cursor: not-allowed;
 }
 
+/* 🧡 زر الإظهار */
 .show-button {
-  grid-column: 1 / -1; /* الزر يمتد على العمودين */
-  padding: 15px;
-  font-size: 1.2rem;
+  grid-column: 1 / -1;
+  padding: 16px;
+  font-size: 1.4rem;
   font-weight: bold;
-  color: #ffffff;
-  background-color: #ff6f00; /* لون برتقالي مثل الصورة */
+  color: #fff;
+  background-color: #ff9800;
   border: none;
-  border-radius: 6px;
+  border-radius: 10px;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease, transform 0.1s;
 }
-
 .show-button:hover {
-  background-color: #e66000;
+  background-color: #fb8c00;
+  transform: scale(1.03);
 }
 
-/* Feedback & Score */
+/* 🌟 التغذية الراجعة */
 .feedback {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: bold;
   margin-bottom: 15px;
-  padding: 12px;
-  border-radius: 6px;
+  padding: 14px;
+  border-radius: 10px;
+  animation: fadeIn 0.3s ease-in-out;
 }
 
 .feedback.correct {
-  color: #155724;
-  background-color: #d4edda;
-  border: 1px solid #c3e6cb;
+  color: #2e7d32;
+  background-color: #e8f5e9;
+  border: 2px solid #81c784;
 }
 
 .feedback.incorrect {
-  color: #721c24;
-  background-color: #f8d7da;
-  border: 1px solid #f5c6cb;
+  color: #c62828;
+  background-color: #ffebee;
+  border: 2px solid #ef9a9a;
 }
 
+/* 💚 النقاط */
 .score {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-weight: bold;
-  color: #28a745; /* أخضر */
+  color: #4caf50;
   margin-top: 10px;
-  font-family: 'Arial', 'Tahoma', sans-serif; /* خط أوضح للأرقام */
+  font-family: 'Tahoma', sans-serif;
 }
 
-/* Footer */
+/* 🦋 الفوتر */
 footer {
   margin-top: 30px;
-  border-top: 1px solid #eee;
+  border-top: 2px dashed #ffe082;
   padding-top: 20px;
-  color: #888;
-  font-size: 0.9rem;
+  color: #666;
+  font-size: 1rem;
+}
+
+/* ✨ حركات لطيفة */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===============================================
+   --- 📱 تصميم متجاوب (Media Queries) ---
+   =============================================== */
+
+/* --- 📏 للأجهزة اللوحية (Tablets) --- */
+@media (max-width: 768px) {
+  .app-container {
+    margin: 15px;
+    padding: 20px;
+  }
+
+  header h1 {
+    font-size: 2.2rem;
+  }
+
+  .grid {
+    gap: 10px;
+  }
+
+  .grid-item {
+    padding: 14px 8px;
+    font-size: 1.5rem;
+  }
+
+  .display-screen {
+    font-size: 3rem;
+    padding: 35px 15px;
+  }
+
+  .input-group input {
+    font-size: 1.4rem;
+    padding: 12px;
+  }
+}
+
+/* --- 📱 للهواتف (Mobile Phones) --- */
+@media (max-width: 480px) {
+  .app-container {
+    margin: 0;
+    padding: 15px;
+    border-radius: 0;
+    border-width: 0;
+    min-height: 100vh;
+    box-shadow: none;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+  header p {
+    font-size: 1rem;
+  }
+
+  .grid-container {
+    padding: 15px;
+  }
+
+  .grid {
+    gap: 6px;
+  }
+
+  .grid-item {
+    padding: 12px 6px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+  }
+
+  .display-screen {
+    font-size: 2.5rem;
+    padding: 25px 10px;
+    border-radius: 12px;
+  }
+
+  .answer-form {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .input-group input {
+    font-size: 1.3rem;
+    padding: 12px;
+  }
+
+  .show-button {
+    font-size: 1.2rem;
+    padding: 14px;
+  }
+
+  .feedback {
+    font-size: 1.1rem;
+    padding: 12px;
+  }
+
+  .score {
+    font-size: 1.3rem;
+  }
+
+  footer {
+    font-size: 0.9rem;
+    padding-top: 15px;
+    margin-top: 20px;
+  }
+}
+
+/* 💻 تحسين مظهر الشاشة والفورم في الشاشات الكبيرة */
+@media (min-width: 700px) {
+  .app-container {
+    max-width: 850px;
+  }
+
+  .display-screen {
+    font-size: 3.5rem;
+    padding: 40px 20px;
+    margin-bottom: 30px;
+  }
+
+  /* الخانتين جنب بعض */
+  .answer-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    justify-content: center;
+    max-width: 600px;
+    margin: 0 auto 25px auto;
+  }
+
+  .input-group input {
+    font-size: 1.5rem;
+    padding: 14px;
+  }
+
+  /* الزر تحت الخانتين */
+  .show-button {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: 100%;
+    max-width: 250px;
+  }
 }

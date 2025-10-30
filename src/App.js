@@ -155,10 +155,7 @@ function App() {
           </div>
         )}
 
-        <div className="score">
-          {/* تحويل الرقم للعرض */}
-          النقاط الحالية (Current Score): {convertToEasternArabic(score)} ✅
-        </div>
+ 
       </main>
 
       {/* الفوتر */}
