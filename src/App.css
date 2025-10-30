@@ -1,38 +1,193 @@
-.App {
+/* Global Styles */
+body {
+  font-family: 'Tahoma', 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  direction: rtl; /* اتجاه من اليمين لليسار */
+}
+
+.app-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px;
+  padding: 25px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header h1 {
+  color: #1a237e; /* لون داكن */
+  font-size: 2.2rem;
+  margin: 5px 0;
+}
+header p {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 0;
+  margin-bottom: 25px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Number Grid Component */
+.grid-container {
+  background-color: #e3f2fd; /* خلفية سماوية فاتحة مثل الصورة */
+  border: 1px solid #bbdefb;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.grid-container h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #0d47a1; /* أزرق داكن */
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* 6 أعمدة */
+  gap: 10px;
+}
+
+.grid-item {
+  padding: 15px 10px;
+  font-size: 1.5rem; /* تكبير الخط للأرقام العربية */
+  font-weight: bold;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.grid-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* التحديد بالأخضر والأزرق كما في الصورة */
+.grid-container:first-of-type .grid-item.selected {
+  border-color: #28a745; /* إطار أخضر */
+  background-color: #d4edda;
+  color: #155724;
+  box-shadow: 0 0 10px rgba(40, 167, 69, 0.5);
+}
+
+.grid-container:last-of-type .grid-item.selected {
+  border-color: #007bff; /* إطار أزرق */
+  background-color: #cce5ff;
+  color: #004085;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+
+/* Display Screen */
+.display-screen {
+  background-color: #212529; /* خلفية سوداء/داكنة مثل الصورة */
+  color: #ffffff;
+  font-size: 4.5rem; /* تكبير الخط للأرقام العربية */
+  font-weight: bold;
+  padding: 45px 20px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  font-family: 'Arial', 'Tahoma', sans-serif; /* خط أوضح للأرقام */
+}
+
+/* Answer Form */
+.answer-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.input-group {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: right; /* محاذاة النص لليمين */
 }
 
-.App-link {
-  color: #61dafb;
+.input-group label {
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #555;
+  font-size: 0.9rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.input-group input {
+  padding: 12px;
+  font-size: 1.4rem; /* تكبير الخط */
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #f8f9fa;
+  text-align: center; /* توسيط الرقم */
+  font-family: 'Arial', 'Tahoma', sans-serif; /* خط أوضح للأرقام */
+}
+
+.input-group input:disabled {
+  background-color: #e9ecef;
+  color: #6c757d;
+  cursor: not-allowed;
+}
+
+.show-button {
+  grid-column: 1 / -1; /* الزر يمتد على العمودين */
+  padding: 15px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #ff6f00; /* لون برتقالي مثل الصورة */
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.show-button:hover {
+  background-color: #e66000;
+}
+
+/* Feedback & Score */
+.feedback {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  padding: 12px;
+  border-radius: 6px;
+}
+
+.feedback.correct {
+  color: #155724;
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+}
+
+.feedback.incorrect {
+  color: #721c24;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+}
+
+.score {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #28a745; /* أخضر */
+  margin-top: 10px;
+  font-family: 'Arial', 'Tahoma', sans-serif; /* خط أوضح للأرقام */
+}
+
+/* Footer */
+footer {
+  margin-top: 30px;
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+  color: #888;
+  font-size: 0.9rem;
 }
