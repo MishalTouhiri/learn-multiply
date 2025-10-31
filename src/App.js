@@ -141,7 +141,7 @@ function App() {
 
         {/* شاشة عرض العملية */}
         <div className="display-screen">
-          {convertToEasternArabic(selectedTable)} x {convertToEasternArabic(selectedMultiplier)}
+          {convertToEasternArabic(selectedTable)} x {convertToEasternArabic(selectedMultiplier)} =
         </div>
 
         {/* نموذج الإجابة */}
@@ -193,6 +193,7 @@ function App() {
 
       {/* الفوتر */}
       <footer>
+        <h1>مشاركة/عبد المجيد حميد طوهري </h1>
         <p>M.H.T © 2025 جميع الحقوق محفوظة.</p>
       </footer>
     </div>
